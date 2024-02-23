@@ -9,8 +9,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent {
   //aqui eu estou criando uma variavel publica, tipando com : any(qualquer coisa) e atribuindo um array vazio
+  public mode = 'list';
   public todos: Todo[] = [];
-  public title: String = 'Minhas tarefas';
+  public title: String = 'Lista de tarefas';
   public form: FormGroup;
 
   //toda vez que a class Component for chamada, o metodo construtor é inicializado
@@ -65,6 +66,7 @@ export class AppComponent {
   save() {
     const data = JSON.stringify(this.todos);
     localStorage.setItem('todos', data);
+    this.mode = 'list';
   }
 
   load() {
@@ -74,5 +76,9 @@ export class AppComponent {
     } else {
       this.todos = [];
     }
+  }
+
+  changeMode(mode: string) {
+    this.mode = mode;
   }
 }

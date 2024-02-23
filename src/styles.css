@@ -1,0 +1,114 @@
+:root {
+  --background-principal: #3023ae;
+  --background-secundario: #c86dd7;
+  --background-gradiente: linear-gradient(
+    60deg,
+    var(--background-principal) 0%,
+    var(--background-secundario) 100%
+  );
+
+  --box-shadow-todo: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+
+  --font-family: "Montserrat", sans-serif;
+  --font-title: "Dancing Script", cursive;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 300;
+  text-align: center;
+
+  background: var(--background-principal);
+  background: var(--background-gradiente);
+  filter: progid:DXImage.Transform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=0);
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-todo);
+}
+
+li {
+  padding: 15px;
+  margin: 10px;
+  font-size: 1em;
+  font-style: italic;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+li > button {
+  border: none;
+  background-color: #fff;
+  font-size: 1em;
+  float: right;
+  opacity: 0.6;
+  transition: opacity 1s;
+}
+
+li > button:hover {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.title {
+  font-family: var(--font-title);
+  color: #fff;
+  font-size: 4em;
+  text-shadow: 2px 4px #000;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  color: #000;
+  font-size: 1em;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#modal {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-todo);
+}
+
+#modal > h1 {
+  font-size: 1.5em;
+}
+
+input {
+  width: 95%;
+  line-height: 50px;
+  text-indent: 10px;
+  font-size: 1.2em;
+}
+
+.danger {
+  color: #dd2121;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 10px;
+}
